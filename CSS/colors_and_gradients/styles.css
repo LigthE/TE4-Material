@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  /* background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.4), rgb(255, 255, 255), #ccc); */
+  /* background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgb(255, 255, 255), #ccc); */
+  /* background: radial-gradient(at center left, rgb(241, 12, 12), rgb(129, 17, 17), #ccc); */
+  background: conic-gradient(from 45deg at 50% 30%, #f69d3c, 10deg, #3f87a6, 350deg, #ebf8e1);
+
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}

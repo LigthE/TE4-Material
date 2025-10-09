@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="styles.css" />
+    <title>Starter Template</title>
+  </head>
+  <body>
+    <h1>Welcome to the Starter Template</h1>
+    <p>This is a basic HTML template to get you started.</p>
+    <form action="#">
+      <fieldset>
+        <legend>Personal info</legend>
+        <label for="fullname">Full name</label>
+        <input
+          type="text"
+          id="fullname"
+          placeholder="John Doe"
+          required />
+        <label for="emailaddress">Email address</label>
+        <input
+          type="email"
+          id="emailaddress"
+          placeholder="example@server.com"
+          required />
+        <label for="phonenumber">Phone number</label>
+        <input
+          type="number"
+          id="phonenumber" />
+        <label for="country">Select country</label>
+        <select id="contry">
+          <option
+            value=""
+            selected
+            disabled>
+            Choose your country
+          </option>
+          <option value="sweden">Sweden</option>
+          <option value="finland">Finland</option>
+          <option value="denmark">Denmark</option>
+          <option value="norway">Norway</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Payment info</legend>
+        <label for="address1">Address 1</label>
+        <input
+          type="text"
+          id="address1"
+          placeholder="Some street, some county, 10"
+          required />
+        <label for="cardnumber">Card number</label>
+        <input
+          type="number"
+          id="cardnumber"
+          placeholder="4242 4242 4242 4242"
+          required />
+        <label for="cardholdername">Name on the Card</label>
+        <input
+          type="text"
+          id="cardholdername"
+          placeholder="John Doe" />
+        <label for="country">Select country</label>
+        <select id="contry">
+          <option
+            value=""
+            selected
+            disabled>
+            Choose your country
+          </option>
+          <option value="sweden">Sweden</option>
+          <option value="finland">Finland</option>
+          <option value="denmark">Denmark</option>
+          <option value="norway">Norway</option>
+        </select>
+
+        <label for="asap">ASAP</label>
+        <input
+          type="radio"
+          id="asap"
+          name="urgency"
+          value="asap"
+          checked />
+
+        <label for="2weeks">In 2 weeks</label>
+        <input
+          type="radio"
+          id="2weeks"
+          name="urgency"
+          value="2weeks" />
+
+        <label for="flexible">Flexible</label>
+        <input
+          type="radio"
+          id="flexible"
+          name="urgency"
+          value="flexible" />
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

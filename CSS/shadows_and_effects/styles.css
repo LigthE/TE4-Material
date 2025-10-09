@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f4f4f4;
+  --text: #333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.card {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  filter: grayscale(1);
+}
+
+.card img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  filter: blur(10px);
+}
+.card img:hover {
+  filter: blur(0);
+}
+
+.blur {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  max-width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+}
+
+.blur:hover {
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+
+.card h2 {
+  text-shadow: 2px 2px 0px red;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.9) 0px 22px 70px 4px;
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0f14;
+    --text: #e9eef3;
+  }
+}

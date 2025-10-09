@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="ligth dark" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>HOLIDAY jOURNEY!</title>
+  </head>
+  <body>
+    <header class="container">
+      <h1>😃 trip pictures from turkey!</h1>
+      <label for="themeSelect">Theme</label>
+      <select id="themeSelect" class="btn">
+        <option value="system">system</option>
+        <option value="dark">dark</option>
+        <option value="ligth">ligth</option>
+      </select>
+    </header>
+    <main class="container">
+      <figure clas="viewer" aria-live="polite">
+        <img src="" alt="" id="mainImage" />
+        <figcaption id="caption"></figcaption>
+      </figure>
+      <section>
+        <h2 class="sr-only">Thumbnails</h2>
+        <ul id="thumbs" class="thumbs" aria-label="Image Thumbnails"></ul>
+      </section>
+    </main>
+    <dialog id="lightbox" class="lightbox" aria-label="Image preview">
+      <img src="" alt="" id="lightboxImage" />
+      <p lightboxCaption></p>
+      <button id="closeLightBox" class="btn" aria-label="Close Preview">
+        close preview
+      </button>
+    </dialog>
+    <button id="topBtn" class="top-btn" aria-label="back to top"></button>
+    <div class="box"></div>
+    <h1>Welcome to the Starter Template</h1>
+    <p>This is a basic HTML template to get you started.</p>
+    <input type="text" placeholder="im a input blyat" />
+    <script src="script.js"></script>
+  </body>
+</html>
