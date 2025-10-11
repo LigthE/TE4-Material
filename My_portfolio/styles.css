@@ -8,7 +8,8 @@ header img {
   height: 70px;
   width: 70px;
 }
-/*körde heigth auto för att bilden skulle ändra och vara responsive på mobiler och sånt*/
+/*körde heigth auto för att bilden skulle ändra och
+ vara responsive på mobiler och sånt dessutom hålla sig på plats i cirkeln*/
 img {
   max-width: auto;
   height: auto;
@@ -45,7 +46,7 @@ body {
 }
 s {
   font-size: 2rem;
-  color: rgb(255, 2, 2);
+  color: rgb(226, 5, 5);
 }
 
 nav a {
@@ -71,8 +72,8 @@ nav a:active {
   height: 100px;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid #c92020;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 4px solid #c20c0c;
+  box-shadow: 10px 4px 50px rgb(251, 255, 0);
   background: #ffffff;
 }
 
@@ -84,4 +85,47 @@ nav a:active {
 b {
   color: burlywood;
   font-size: 2rem;
+}
+
+.contact-container {
+  flex-direction: column;
+  display: flex;
+
+  max-width: 200px;
+  text-align: left;
+  gap: 10px;
+  border-radius: 0%;
+  background-color: rgb(150, 0, 0);
+  height: auto;
+}
+
+.contactinfo {
+  text-align: left;
+  height: 30px;
+  width: 195px;
+  border-radius: 30px;
+}
+
+.contactmessage {
+  text-align: left;
+  width: 195px;
+  height: 100px;
+  border-radius: 30px;
+}
+/* jag tog denhär från chat för att jag glömde
+hur man fixar no background på en button
+*/
+.submit-btn button {
+  height: 50px;
+  width: 195px;
+  background-color: rgb(151, 114, 1);
+  cursor: pointer;
+  color: white;
+  border-radius: 50%;
+  font-size: 25px;
+}
+
+.contact-container-höger img {
+  max-width: 200px;
+  border-radius: 0%; /* skjustera kanter senare på ny hemsida*/
 }
