@@ -88,13 +88,9 @@ b {
 }
 
 .contact-container {
-  flex-direction: column;
-  display: flex;
-
   max-width: 200px;
   text-align: left;
-  gap: 10px;
-  border-radius: 0%;
+  border-radius: 0%; /*jag kan göra boxen rundare i framtiden*/
   background-color: rgb(150, 0, 0);
   height: auto;
 }
@@ -114,7 +110,7 @@ b {
 }
 /* jag tog denhär från chat för att jag glömde
 hur man fixar no background på en button
-*/
+ bara denhör submit-btn */
 .submit-btn button {
   height: 50px;
   width: 195px;

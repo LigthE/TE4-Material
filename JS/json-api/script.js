@@ -74,3 +74,20 @@ const fetchList = async () => {
   console.log(data);
 };
 // 1 b
+
+async function loadPosts() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/users");
+  const user = await response.json();
+
+  const list = document.getElementById("users-list");
+  user.forEach((user) => {
+    const li = document.createElement("li");
+    li.textContent = `${user.name} - ${user.email}`; //jag visste inte att man kunde använda 1 li.textcontent
+    //så jag fråga chatt han sa använd - tecken och lägg till en till curly bracket.
+    list.appendChild(li);
+  });
+}
+
+loadPosts();
+
+// 1 c quotes app  det var för svårt för mig
