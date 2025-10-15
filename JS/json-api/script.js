@@ -25,7 +25,7 @@ const fetchPosts = async () => {
   });
 };
 
-parse;
+//parse;     // jag gömmer parse för den terroriserar min exericise 1b den skapar problem
 const jsonString = '{"name": "Alice", "age": 25, "school": "NTI Soödertörn"}';
 localStorage.setItem("person", jsonString);
 
