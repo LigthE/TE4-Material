@@ -25,7 +25,7 @@ const fetchPosts = async () => {
   });
 };
 
-/*parse
+parse;
 const jsonString = '{"name": "Alice", "age": 25, "school": "NTI Soödertörn"}';
 localStorage.setItem("person", jsonString);
 
@@ -54,7 +54,7 @@ const classObj = {
 console.log(classObj);
 const jsonClass = JSON.stringify(classObj);
 console.log(jsonClass);
-*/
+
 // 1a konvertera till objekt
 //knoverterar til en object och loggar in studentens namn
 
@@ -77,12 +77,12 @@ const fetchList = async () => {
 
 async function loadPosts() {
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  const user = await response.json();
+  const users = await response.json();
 
   const list = document.getElementById("users-list");
-  user.forEach((user) => {
+  users.forEach((users) => {
     const li = document.createElement("li");
-    li.textContent = `${user.name} - ${user.email}`; //jag visste inte att man kunde använda 1 li.textcontent
+    li.textContent = `${users.name} - ${users.email}`; //jag visste inte att man kunde använda 1 li.textcontent
     //så jag fråga chatt han sa använd - tecken och lägg till en till curly bracket.
     list.appendChild(li);
   });
