@@ -57,3 +57,17 @@ margin-left: 44rem; }
   height: 500px;
   object-fit: cover;
 }
+
+
+
+
+
+//bar Nav
+
+
+<li class="navigation-item" //dethärÄrNavigationKnapp//> 
+        <a href="#AboutMe" class="navigation-link smoothscroll">About Me</a>
+        <a href="#MyProjects" class="navigation-link smoothscroll">My Projects</a>
+         <a href="#AboutMe" class="navigation-link smoothscroll">Contact Page</a>
+        <a href="" class="navigation-link smoothscroll">Skills</a>
+      </li>

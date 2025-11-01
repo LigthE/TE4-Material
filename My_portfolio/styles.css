@@ -1,5 +1,79 @@
+:root {
+  --base-color: white;
+  --base-variant: white;
+  --text-color: black;
+  --secondary-text: rgb(53, 45, 45);
+  --primary-color: rgb(110, 102, 102);
+  --accent-color: rgb(8, 13, 151);
+}
+
+.darkmode {
+  --base-color: black;
+  --base-variant: black;
+  --text-color: white;
+  --secondary-text: rgb(77, 70, 70);
+  --primary-color: rgb(110, 102, 102);
+  --accent-color: rgb(8, 13, 151);
+}
+
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+#theme-switch svg {
+  fill: var(
+    --primary-color
+  ); /*allt om theme switch är för att när jag tryker på nigth button 
+  ligth button ska inte synnas och jag skrev primary color för att jag har redan bestämmt en 
+  färg för denhär knappen*/
+}
+
+#theme-switch svg:last-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+  display: block;
+}
+
+#BackToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #580802;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  cursor: pointer;
+  opacity: 0; /*jag vill att den inte ska synas från början*/
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease; /*knappen ska synnas långsammt*/
+}
+
+#BackToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 * {
-  padding: 8;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
@@ -46,12 +120,12 @@ footer {
 header {
   background-color: rgb(0, 0, 0);
   background: url(./assets/main.jpg) center/cover no-repeat;
-  height: 1000px;
+  min-height: 100vh; /*fick hjälp denhär används så den fyller hela skärmen på alla enheter*/
 }
 
 body {
-  background-color: rgb(0, 0, 0);
-  color: white;
+  background-color: var(--base-color);
+  color: var(--text-color);
   text-align: center;
 }
 s {
@@ -157,6 +231,9 @@ hur man fixar no background på en button
   border-radius: 0%; /* skjustera kanter senare på ny hemsida*/
 }
 
-html {
+html,
+body {
   scroll-behavior: smooth;
+  overflow-x: hidden; /*smooth för att scroll ska va lung och overflow så inget syns
+  på enheter som har t.ex mindre resolution på sin skärm*/
 }
