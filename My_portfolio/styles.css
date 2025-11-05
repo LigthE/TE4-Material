@@ -51,6 +51,47 @@
   display: block;
 }
 
+/* den håller navigation bar fast när
+jag skrollar ner */
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(159, 148, 148, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 342px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+/*den är för min bild asså profile picturen*/
+
+.mainIMG img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mainIMG-text {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  color: white;
+  text-align: center;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+.navbar img.nav-logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 #BackToTop {
   position: fixed;
   bottom: 30px;
@@ -78,10 +119,7 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-header img {
-  height: 70px;
-  width: 70px;
-}
+
 /*körde heigth auto för att alla bilder skulle ändra och
  vara responsive på mobiler och sånt dessutom hålla sig på plats i cirkeln*/
 .bubble-container img {
@@ -115,12 +153,6 @@ footer {
   margin: 20px auto;
   max-width: 600px;
   box-shadow: 0 0 30px rgb(0, 0, 0);
-}
-
-header {
-  background-color: rgb(0, 0, 0);
-  background: url(./assets/main.jpg) center/cover no-repeat;
-  min-height: 100vh; /*fick hjälp denhär används så den fyller hela skärmen på alla enheter*/
 }
 
 body {
@@ -229,6 +261,21 @@ hur man fixar no background på en button
 .contact-container-höger img {
   max-width: 200px;
   border-radius: 0%; /* skjustera kanter senare på ny hemsida*/
+}
+
+/*reveal och active gör att jag kan visa mina bilder, samt text först reveal opacity
+0 gär att det inte syns osen efter 0.8 millisekunder jag har scrollat så ska det synnas
+
+för att när denhär är active så körs det opacity 1 och visar alla objekter*/
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 html,
